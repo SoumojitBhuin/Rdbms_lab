@@ -4,7 +4,7 @@
 ## Create Student Table
 
 ```sql
-CREATE TABLE Student (
+CREATE TABLE Student01 (
     Sid NUMBER PRIMARY KEY,
     Sname VARCHAR2(20),
     DOB DATE,
