@@ -113,7 +113,7 @@ WHERE Salary BETWEEN 30000 AND 45000;
 ### 30. Employees with work experience till current date
 
 ```sql
-SELECT * FLOOR(MONTHS_BETWEEN(SYSDATE, DOJ)/12) AS Years_of_Experience
+SELECT e.*, FLOOR(MONTHS_BETWEEN(SYSDATE, DOJ)/12) AS Years_of_Experience
 FROM Employee;
 ```
 
