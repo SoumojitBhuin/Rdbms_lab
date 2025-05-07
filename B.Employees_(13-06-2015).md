@@ -2,7 +2,7 @@
 # B. Below are the details of employees working for the software company ( for questions 11 - 20 )
 ![Employee Table](./company_employee.jpg)
 
-## Table Creation
+### Table Creation
 
 ```sql
 CREATE TABLE EmpDetails (
@@ -15,7 +15,7 @@ CREATE TABLE EmpDetails (
 );
 ```
 
-## Insert Data
+### Insert Data
 
 ```sql
 INSERT ALL
@@ -61,7 +61,7 @@ SELECT * FROM dual;
 
 # SQL Queries for Employee Data
 
-## 11. Employees whose designation is Programmer
+### 11. Employees whose designation is Programmer
 ```sql
 SELECT *
 FROM EmpDetails
@@ -109,7 +109,7 @@ WHERE Designation = 'Programmer';
 </table>
 
 
-## 12. Employees who joined after 2014
+### 12. Employees who joined after 2014
 ```sql
 SELECT *
 FROM EmpDetails
@@ -149,7 +149,7 @@ WHERE DOJ > TO_DATE('31-Dec-2014', 'DD-Mon-YYYY');
 </table>
 
 
-## 13. Employees whose name ends with 'a'
+### 13. Employees whose name ends with 'a'
 ```sql
 SELECT *
 FROM EmpDetails
@@ -205,7 +205,7 @@ WHERE Ename LIKE '%a';
 </table>
 
 
-## 14. Total salary of Programmers
+### 14. Total salary of Programmers
 ```sql
 SELECT SUM(Salary)
 FROM EmpDetails
@@ -227,7 +227,7 @@ WHERE Designation = 'Programmer';
 </table>
 
 
-## 15. All employee names in upper case
+### 15. All employee names in upper case
 ```sql
 SELECT UPPER(Ename)
 FROM EmpDetails;
@@ -252,7 +252,7 @@ FROM EmpDetails;
     </tbody>
 </table>
 
-## 16. Employee with highest experience (earliest DOJ)
+### 16. Employee with highest experience (earliest DOJ)
 ```sql
 SELECT *
 FROM EmpDetails
@@ -275,7 +275,7 @@ WHERE DOJ = (SELECT MIN(DOJ) FROM EmpDetails);
         <tr>
 
 
-## 17. Employees whose name contains 'ee'
+### 17. Employees whose name contains 'ee'
 ```sql
 SELECT *
 FROM EmpDetails
@@ -315,7 +315,7 @@ WHERE Ename LIKE '%ee%';
 </table>
 
 
-## 18. Increase salary by 5000 for DBAs
+### 18. Increase salary by 5000 for DBAs
 ```sql
 UPDATE EmpDetails
 SET Salary = Salary + 5000
@@ -355,7 +355,7 @@ WHERE Designation = 'DBA';
 </table>
 
 
-## 19. Employees earning more than average salary
+### 19. Employees earning more than average salary
 ```sql
 SELECT *
 FROM EmpDetails
@@ -411,7 +411,7 @@ WHERE Salary > (SELECT AVG(Salary) FROM EmpDetails);
 </table>
 
 
-## 20. Custom display of employee records
+### 20. Custom display of employee records
 ```sql
 SELECT Ename || ' is working as ' || Designation || ' with a Salary of Rs. ' || Salary
 AS Employee_Info FROM EmpDetails;
