@@ -1,6 +1,6 @@
 
 # A. create supplier table as shown below (for question 1 - 10)
-![Supplier Table](./images/supplier_table.jpg)
+![Supplier Table](./supplier_table.jpg)
 ## 1. Table Creation and Data Insertion
 
 ```sql
