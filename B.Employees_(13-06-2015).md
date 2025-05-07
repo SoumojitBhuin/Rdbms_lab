@@ -30,6 +30,31 @@ INSERT ALL
 SELECT * FROM dual;
 
 ```
+## HTML Table Preview
+
+<table>
+  <thead>
+    <tr>
+      <th>Eid</th>
+      <th>Ename</th>
+      <th>DOB</th>
+      <th>Designation</th>
+      <th>Salary</th>
+      <th>DOJ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>E101</td><td>Suma</td><td>29-Dec-89</td><td>Designer</td><td>20000</td><td>01-Apr-10</td></tr>
+    <tr><td>E102</td><td>Amit</td><td>10-Jan-95</td><td>Programmer</td><td>25000</td><td>18-Feb-18</td></tr>
+    <tr><td>E103</td><td>Payal</td><td>15-Aug-85</td><td>Tester</td><td>35000</td><td>13-Jun-11</td></tr>
+    <tr><td>E104</td><td>Kiran</td><td>20-Apr-90</td><td>Programmer</td><td>40000</td><td>07-Mar-14</td></tr>
+    <tr><td>E105</td><td>Meenal</td><td>29-May-83</td><td>DBA</td><td>50000</td><td>09-Dec-11</td></tr>
+    <tr><td>E106</td><td>Sheila</td><td>01-May-70</td><td>Analyst</td><td>60000</td><td>25-Sep-18</td></tr>
+    <tr><td>E107</td><td>Swamy</td><td>13-Jan-85</td><td>Programmer</td><td>45000</td><td>14-Feb-16</td></tr>
+    <tr><td>E108</td><td>Sushma</td><td>22-Dec-76</td><td>DBA</td><td>45000</td><td>31-Jan-12</td></tr>
+  </tbody>
+</table>
+
 
 ## Queries
 
