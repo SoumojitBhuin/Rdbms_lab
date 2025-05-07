@@ -1,6 +1,6 @@
 
 # B. Below are the details of employees working for the software company ( for questions 11 - 20 )
-![Supplier Table](./company_employee.jpg)
+![Employee Table](./company_employee.jpg)
 
 ## Table Creation
 
