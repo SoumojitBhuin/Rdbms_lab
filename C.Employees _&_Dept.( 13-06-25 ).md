@@ -1,5 +1,5 @@
 
-# Create the tables as shown bellow with the given constrainsts ( for question 21 - 30 )
+# Create the tables as shown below with the given constrainsts ( for question 21 - 30 )
 ![Employee Table](./employee.jpg)
 
 ## Create Tables
