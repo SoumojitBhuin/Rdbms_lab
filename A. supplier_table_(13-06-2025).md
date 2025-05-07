@@ -21,6 +21,62 @@ INSERT ALL
     INTO Supplier (Sup_No, Sup_Name, Item_Supplied, Item_Price, City) VALUES ('S6', 'Srikanth', 'Processor', 8500, 'Chennai')
 SELECT * FROM dual;
 ```
+<table border="1" cellpadding="10" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Sup_No</th>
+            <th>Sup_Name</th>
+            <th>Item_Supplied</th>
+            <th>Item_Price</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>S1</td>
+            <td>Suresh</td>
+            <td>Keyboard</td>
+            <td>400</td>
+            <td>Hyderabad</td>
+        </tr>
+        <tr>
+            <td>S2</td>
+            <td>Kiran</td>
+            <td>Processor</td>
+            <td>8000</td>
+            <td>Delhi</td>
+        </tr>
+        <tr>
+            <td>S3</td>
+            <td>Mohan</td>
+            <td>Mouse</td>
+            <td>350</td>
+            <td>Delhi</td>
+        </tr>
+        <tr>
+            <td>S4</td>
+            <td>Ramesh</td>
+            <td>Processor</td>
+            <td>9000</td>
+            <td>Bangalore</td>
+        </tr>
+        <tr>
+            <td>S5</td>
+            <td>Manish</td>
+            <td>Printer</td>
+            <td>6000</td>
+            <td>Mumbai</td>
+        </tr>
+        <tr>
+            <td>S6</td>
+            <td>Srikanth</td>
+            <td>Processor</td>
+            <td>8500</td>
+            <td>Chennai</td>
+        </tr>
+    </tbody>
+</table>
+
 
 ## 2. Queries
 
