@@ -63,7 +63,9 @@ SELECT * FROM dual;
 
 ## 11. Employees whose designation is Programmer
 ```sql
-SELECT * FROM EmpDetails WHERE Designation = 'Programmer';
+SELECT *
+FROM EmpDetails
+WHERE Designation = 'Programmer';
 ```
 
 
@@ -109,7 +111,9 @@ SELECT * FROM EmpDetails WHERE Designation = 'Programmer';
 
 ## 12. Employees who joined after 2014
 ```sql
-SELECT * FROM EmpDetails WHERE DOJ > TO_DATE('31-Dec-2014', 'DD-Mon-YYYY');
+SELECT *
+FROM EmpDetails
+WHERE DOJ > TO_DATE('31-Dec-2014', 'DD-Mon-YYYY');
 ```
 
 
@@ -147,7 +151,9 @@ SELECT * FROM EmpDetails WHERE DOJ > TO_DATE('31-Dec-2014', 'DD-Mon-YYYY');
 
 ## 13. Employees whose name ends with 'a'
 ```sql
-SELECT * FROM EmpDetails WHERE Ename LIKE '%a';
+SELECT *
+FROM EmpDetails
+WHERE Ename LIKE '%a';
 ```
 
 
@@ -201,7 +207,9 @@ SELECT * FROM EmpDetails WHERE Ename LIKE '%a';
 
 ## 14. Total salary of Programmers
 ```sql
-SELECT SUM(Salary) FROM EmpDetails WHERE Designation = 'Programmer';
+SELECT SUM(Salary)
+FROM EmpDetails
+WHERE Designation = 'Programmer';
 ```
 
 
@@ -221,7 +229,8 @@ SELECT SUM(Salary) FROM EmpDetails WHERE Designation = 'Programmer';
 
 ## 15. All employee names in upper case
 ```sql
-SELECT UPPER(Ename) FROM EmpDetails;
+SELECT UPPER(Ename)
+FROM EmpDetails;
 ```
 <h2>Employees' Names in Uppercase</h2>
 
@@ -245,7 +254,9 @@ SELECT UPPER(Ename) FROM EmpDetails;
 
 ## 16. Employee with highest experience (earliest DOJ)
 ```sql
-SELECT * FROM EmpDetails WHERE DOJ = (SELECT MIN(DOJ) FROM EmpDetails);
+SELECT *
+FROM EmpDetails
+WHERE DOJ = (SELECT MIN(DOJ) FROM EmpDetails);
 ```
 
 
@@ -266,7 +277,9 @@ SELECT * FROM EmpDetails WHERE DOJ = (SELECT MIN(DOJ) FROM EmpDetails);
 
 ## 17. Employees whose name contains 'ee'
 ```sql
-SELECT * FROM EmpDetails WHERE Ename LIKE '%ee%';
+SELECT *
+FROM EmpDetails
+WHERE Ename LIKE '%ee%';
 ```
 
 
@@ -304,7 +317,9 @@ SELECT * FROM EmpDetails WHERE Ename LIKE '%ee%';
 
 ## 18. Increase salary by 5000 for DBAs
 ```sql
-UPDATE EmpDetails SET Salary = Salary + 5000 WHERE Designation = 'DBA';
+UPDATE EmpDetails
+SET Salary = Salary + 5000
+WHERE Designation = 'DBA';
 ```
 
 
@@ -342,7 +357,9 @@ UPDATE EmpDetails SET Salary = Salary + 5000 WHERE Designation = 'DBA';
 
 ## 19. Employees earning more than average salary
 ```sql
-SELECT * FROM EmpDetails WHERE Salary > (SELECT AVG(Salary) FROM EmpDetails);
+SELECT *
+FROM EmpDetails
+WHERE Salary > (SELECT AVG(Salary) FROM EmpDetails);
 ```
 
 
@@ -396,7 +413,8 @@ SELECT * FROM EmpDetails WHERE Salary > (SELECT AVG(Salary) FROM EmpDetails);
 
 ## 20. Custom display of employee records
 ```sql
-SELECT Ename || ' is working as ' || Designation || ' with a Salary of Rs. ' || Salary AS Employee_Info FROM EmpDetails;
+SELECT Ename || ' is working as ' || Designation || ' with a Salary of Rs. ' || Salary
+AS Employee_Info FROM EmpDetails;
 ```
 
 
