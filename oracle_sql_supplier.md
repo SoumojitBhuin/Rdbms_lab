@@ -1,6 +1,6 @@
 
-# Oracle SQL Script for Supplier Table
-
+# A. create supplier table as shown below (for question 1 - 10)
+![Supplier Table](./images/supplier_table.png)
 ## 1. Table Creation and Data Insertion
 
 ```sql
