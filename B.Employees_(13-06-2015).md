@@ -30,7 +30,7 @@ INSERT ALL
 SELECT * FROM dual;
 
 ```
-## HTML Table Preview
+
 
 <table>
   <thead>
