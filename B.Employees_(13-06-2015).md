@@ -1,5 +1,6 @@
 
-# Oracle SQL Commands for Employee Table (EmpDetails)
+# B. Below are the details of employees working for the software company ( for questions 11 - 20 )
+![Supplier Table](./company_employee.png)
 
 ## Table Creation
 
