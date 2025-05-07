@@ -65,7 +65,7 @@ SELECT * FROM dual;
 ```sql
 SELECT * FROM EmpDetails WHERE Designation = 'Programmer';
 ```
-<h2>Programmers in EmpDetails</h2>
+
 
 <table border="1" cellpadding="10" cellspacing="0">
     <thead>
@@ -111,7 +111,7 @@ SELECT * FROM EmpDetails WHERE Designation = 'Programmer';
 ```sql
 SELECT * FROM EmpDetails WHERE DOJ > TO_DATE('31-Dec-2014', 'DD-Mon-YYYY');
 ```
-<h2>Employees with DOJ after 31-Dec-2014</h2>
+
 
 <table border="1" cellpadding="10" cellspacing="0">
     <thead>
@@ -149,7 +149,7 @@ SELECT * FROM EmpDetails WHERE DOJ > TO_DATE('31-Dec-2014', 'DD-Mon-YYYY');
 ```sql
 SELECT * FROM EmpDetails WHERE Ename LIKE '%a';
 ```
-<h2>Employees with Names Ending in 'a'</h2>
+
 
 <table border="1" cellpadding="10" cellspacing="0">
     <thead>
@@ -203,7 +203,7 @@ SELECT * FROM EmpDetails WHERE Ename LIKE '%a';
 ```sql
 SELECT SUM(Salary) FROM EmpDetails WHERE Designation = 'Programmer';
 ```
-<h2>Total Salary of Programmers</h2>
+
 
 <table border="1" cellpadding="10" cellspacing="0">
     <thead>
@@ -247,7 +247,7 @@ SELECT UPPER(Ename) FROM EmpDetails;
 ```sql
 SELECT * FROM EmpDetails WHERE DOJ = (SELECT MIN(DOJ) FROM EmpDetails);
 ```
-<h2>Employee with the Earliest Date of Joining</h2>
+
 
 <table border="1" cellpadding="10" cellspacing="0">
     <thead>
@@ -268,7 +268,7 @@ SELECT * FROM EmpDetails WHERE DOJ = (SELECT MIN(DOJ) FROM EmpDetails);
 ```sql
 SELECT * FROM EmpDetails WHERE Ename LIKE '%ee%';
 ```
-<h2>Employees with 'ee' in their Name</h2>
+
 
 <table border="1" cellpadding="10" cellspacing="0">
     <thead>
@@ -306,7 +306,7 @@ SELECT * FROM EmpDetails WHERE Ename LIKE '%ee%';
 ```sql
 UPDATE EmpDetails SET Salary = Salary + 5000 WHERE Designation = 'DBA';
 ```
-<h2>Updated Salary for DBAs</h2>
+
 
 <table border="1" cellpadding="10" cellspacing="0">
     <thead>
@@ -344,7 +344,7 @@ UPDATE EmpDetails SET Salary = Salary + 5000 WHERE Designation = 'DBA';
 ```sql
 SELECT * FROM EmpDetails WHERE Salary > (SELECT AVG(Salary) FROM EmpDetails);
 ```
-<h2>Employees with Salary Above Average</h2>
+
 
 <table border="1" cellpadding="10" cellspacing="0">
     <thead>
@@ -398,7 +398,7 @@ SELECT * FROM EmpDetails WHERE Salary > (SELECT AVG(Salary) FROM EmpDetails);
 ```sql
 SELECT Ename || ' is working as ' || Designation || ' with a Salary of Rs. ' || Salary AS Employee_Info FROM EmpDetails;
 ```
-<h2>Employee Information</h2>
+
 
 <table border="1" cellpadding="10" cellspacing="0">
     <thead>
