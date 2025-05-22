@@ -19,7 +19,8 @@ CREATE OR REPLACE PROCEDURE debit_account(p_account_id IN NUMBER) AS
     v_balance      account.balance%TYPE;
     v_debit_amount CONSTANT NUMBER := 2000;
     v_min_balance  CONSTANT NUMBER := 500;
-
+```
+```sql
 BEGIN
     -- Get current balance
     SELECT balance INTO v_balance
@@ -45,8 +46,7 @@ EXCEPTION
         DBMS_OUTPUT.PUT_LINE('Unexpected error: ' || SQLERRM);
 END;
 /
-```
-```sql
+
 -- Step 4: Accept input and call the procedure
 DEFINE acc_no = 102;
 
