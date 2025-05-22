@@ -19,8 +19,7 @@ CREATE OR REPLACE PROCEDURE debit_account(p_account_id IN NUMBER) AS
     v_balance      account.balance%TYPE;
     v_debit_amount CONSTANT NUMBER := 2000;
     v_min_balance  CONSTANT NUMBER := 500;
-```
-```sql
+
 BEGIN
     -- Get current balance
     SELECT balance INTO v_balance
