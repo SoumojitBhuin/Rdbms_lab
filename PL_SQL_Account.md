@@ -5,21 +5,22 @@ CREATE TABLE account (
     Name VARCHAR2(100) NOT NULL,
     balance NUMBER(15, 2) NOT NULL
 );
+```
 
-
-
+```sql
 INSERT INTO account (account_id, Name, balance) VALUES (101, 'Alice', 10000);
 INSERT INTO account (account_id, Name, balance) VALUES (102, 'Bob', 3500);
 INSERT INTO account (account_id, Name, balance) VALUES (103, 'Charlie', 2500);
 INSERT INTO account (account_id, Name, balance) VALUES (104, 'Diana', 1800);
 INSERT INTO account (account_id, Name, balance) VALUES (105, 'Ethan', 500);
-
-
-
+```
+```sql
 CREATE OR REPLACE PROCEDURE debit_account(p_account_id IN NUMBER) AS
     v_balance      account.balance%TYPE;
     v_debit_amount CONSTANT NUMBER := 2000;
     v_min_balance  CONSTANT NUMBER := 500;
+```
+```sql
 BEGIN
     -- Get current balance
     SELECT balance INTO v_balance
@@ -45,9 +46,10 @@ EXCEPTION
         DBMS_OUTPUT.PUT_LINE('Unexpected error: ' || SQLERRM);
 END;
 /
-
+```
+```sql
 -- Step 4: Accept input and call the procedure
-ACCEPT acc_no NUMBER PROMPT 'Enter Account Number: '
+DEFINE acc_no = 102;
 
 BEGIN
     debit_account(&acc_no);
