@@ -1,0 +1,72 @@
+Develop a PL/SQL program to:
+
+1. Create an `EMPLOYEE` table with columns:  
+   - `EMP_ID` (Employee ID)  
+   - `EMP_NAME` (Employee Name)  
+   - `EMP_AGE` (Employee Age)  
+   - `EMP_SALARY` (Employee Salary)  
+
+2. Insert at least 6 sample records with varied salaries.  
+
+3. **Using a cursor**, retrieve and display only employees with salaries greater than 3500.
+
+4. Sort results by salary (highest first).
+
+## **Complete Solution**
+
+### **1. Table Creation & Sample Data**
+
+```sql
+-- Create EMPLOYEE table
+CREATE TABLE EMPLOYEE (
+    EMP_ID NUMBER PRIMARY KEY,
+    EMP_NAME VARCHAR2(100),
+    EMP_AGE NUMBER,
+    EMP_SALARY NUMBER
+);
+
+-- Insert sample data
+INSERT INTO EMPLOYEE VALUES (101, 'Rahul Sharma', 28, 4200);
+INSERT INTO EMPLOYEE VALUES (102, 'Priya Patel', 35, 3200);
+INSERT INTO EMPLOYEE VALUES (103, 'Amit Singh', 42, 5800);
+INSERT INTO EMPLOYEE VALUES (104, 'Neha Gupta', 31, 2900);
+INSERT INTO EMPLOYEE VALUES (105, 'Vikram Joshi', 45, 6700);
+INSERT INTO EMPLOYEE VALUES (106, 'Ananya Reddy', 27, 3800);
+
+COMMIT;
+
+2. PL/SQL Block with Explicit Cursor
+
+sql
+SET SERVEROUTPUT ON;
+
+DECLARE
+    
+    CURSOR c IS
+        SELECT EMP_ID, EMP_NAME, EMP_AGE, EMP_SALARY
+        FROM EMPLOYEE
+        WHERE EMP_SALARY > 3500
+        ORDER BY EMP_SALARY DESC;
+    
+ 
+    emp_record c%ROWTYPE;
+
+BEGIN
+ 
+    OPEN high_salary_emp;
+    LOOP
+        FETCH c INTO emp_record;
+        EXIT WHEN c%NOTFOUND;
+    
+        DBMS_OUTPUT.PUT_LINE(
+            RPAD(emp_record.EMP_ID, 4) || ' ' ||
+            RPAD(emp_record.EMP_NAME, 15) || ' ' ||
+            LPAD(emp_record.EMP_AGE, 3) || '  ' ||
+            TO_CHAR(emp_record.EMP_SALARY, '$9,999')
+        );
+    END LOOP;
+    CLOSE c;
+    
+    DBMS_OUTPUT.PUT_LINE(high_salary_emp%ROWCOUNT || ' employees found.');
+END;
+/
